@@ -1,0 +1,8 @@
+        4 flags in CPSR
+
+        N   negative
+        V   overflow
+        Z   zero
+        C   carry
+
+        Each will euqla 0 or 1 for false or true
