@@ -40,9 +40,9 @@ _Z4facti:
       mov   r2, #1        @set r2 as 1 to start
 
 4:
-     cmp    r1, #1
+     cmp    r1, #1        @compare r1 and 1
      mul    r2, r1, r2    @r2=r1*r2
      sub    r1, r1, #1    @r1=r1-1
-     bgt    4b            @branch back if greater than
+     bgt    4b            @branch back if greater than (from the cmp above)
      mov    r0, r2        @move value into r0 to return
      bx     lr
