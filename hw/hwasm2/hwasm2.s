@@ -1,3 +1,4 @@
+@ I pledge my honor that I have abided by the Stevens Honor System - Mitchell Reiff
         .global _Z3sumii
 _Z3sumii:
         mov     r2, r0          @ set r2 to r0 to free up r0 (is this necessary in such a basic use case?)
