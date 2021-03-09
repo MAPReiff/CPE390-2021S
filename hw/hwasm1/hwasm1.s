@@ -1,4 +1,5 @@
-      .global main
+@ I pledge my honor that I have abided by the Stevens Honor System - Mitchell Reiff
+.global main
 main:
       mov     r0, #5      @ assign 5 to reg0
 
