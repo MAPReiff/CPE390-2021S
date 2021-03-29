@@ -18,13 +18,25 @@ uint32_t a1(uint32_t n);
 uint32_t a2(uint32_t n);
 
 // write this in assembler and C++! Read the first element of the array n times
-uint32_t readOneLocation(uint32_t a[], int n);
+uint32_t readOneLocation(uint32_t a[], int n) {
+  for (int i = 0; i < n; i++) {
+    int val = a[0];
+  }
+}
 
 // write this in assembler and C++! Read the entire array of n elements
-uint32_t readArray(uint32_t a[], int n);
+uint32_t readArray(uint32_t a[], int n) {
+  for (int i = 0; i < n; i++) {
+    int val = a[n];
+  }
+}
 
 // write this in assembler and C++! Write zero to the entire array of n elements
-uint32_t writeArray(uint32_t a[], int n);
+uint32_t writeArray(uint32_t a[], int n) {
+  for (int i = 0; i < n; i++) {
+    a[n] = 0;
+  }
+}
 
 // count up and call function f n times
 uint32_t b1(uint32_t n) {
