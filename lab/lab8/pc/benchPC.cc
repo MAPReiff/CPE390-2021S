@@ -19,16 +19,20 @@ uint32_t a2(uint32_t n);
 
 // write this in assembler and C++! Read the first element of the array n times
 uint32_t readOneLocation(uint32_t a[], int n) {
+  uint32_t val;
   for (int i = 0; i < n; i++) {
-    int val = a[0];
+    val = a[0];
   }
+  return val;
 }
 
 // write this in assembler and C++! Read the entire array of n elements
 uint32_t readArray(uint32_t a[], int n) {
+  uint32_t val;
   for (int i = 0; i < n; i++) {
-    int val = a[n];
+    val = a[n];
   }
+  return val;
 }
 
 // write this in assembler and C++! Write zero to the entire array of n elements
@@ -36,6 +40,7 @@ uint32_t writeArray(uint32_t a[], int n) {
   for (int i = 0; i < n; i++) {
     a[n] = 0;
   }
+  return 0;
 }
 
 // count up and call function f n times
@@ -156,6 +161,19 @@ uint64_t array2(uint32_t x[], uint32_t n) {
  */
 uint64_t array3(uint32_t x[], uint32_t n) {
   uint64_t sum = 0;
+  for (int i = 0; i < n; i++) {
+    if (n % 2 == 0) {  // if even
+      sum = sum + x[n];
+    } else {  // if odd
+    }
+  }
+  for (int i = 0; i < n; i++) {
+    if (n % 2 == 0) {  // if even
+
+    } else {  // if odd
+      sum = sum + x[n];
+    }
+  }
 
   return sum;
 }
@@ -169,6 +187,18 @@ uint64_t array3(uint32_t x[], uint32_t n) {
  */
 uint64_t array4(uint32_t x[], uint32_t n) {
   uint64_t sum = 0;
+  for (int i = 0; i < n; i = i + 4) {  // 1st case 0->4->8....
+    sum = sum + x[i];
+  }
+  for (int i = 1; i < n; i = i + 4) {  // 2nd case 1->5->9...
+    sum = sum + x[i];
+  }
+  for (int i = 2; i < n; i = i + 4) {  // 3rd case 2->6->10...
+    sum = sum + x[i];
+  }
+  for (int i = 3; i < n; i = i + 4) {  // 4th case 3->7->11...
+    sum = sum + x[i];
+  }
 
   return sum;
 }
@@ -277,9 +307,9 @@ int main() {
   */
   constexpr uint32_t numTrials = 5;  // try each test 5 times
 
-  const uint32_t n = 200000000;  // 200 million
-  benchmark1("a1", a1, n, numTrials);
-  benchmark1("a2", a2, n, numTrials);
+  const uint32_t n = 2000000000;  // 2 billion
+  // benchmark1("a1", a1, n, numTrials);
+  // benchmark1("a2", a2, n, numTrials);
   benchmark1("b1", b1, n, numTrials);
   benchmark1("b1b", b1b, n, numTrials);
   benchmark1("b2", b2, n, numTrials);
